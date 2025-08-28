@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Phishing Awareness Training - Password Security</title>
+	<style type="text/css">* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            padding: 12px;
+            font-size: 9pt;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 12px;
+        }
+        
+        .main-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .header {
+            background: #d32f2f;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+        
+        .header-title {
+            font-size: 11pt;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        .warning-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
+            fill: currentColor;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .security-badge {
+            background: #b71c1c;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 8pt;
+            font-weight: 500;
+            font-family: Arial, sans-serif;
+        }
+        
+        .content {
+            padding: 24px;
+        }
+        
+        .alert-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            background: #ffebee;
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #ffcdd2;
+        }
+        
+        .alert-inline-icon {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 8px;
+        }
+        
+        .alert-inline-icon-bg {
+            background: #ffcdd2;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .alert-inline-icon-bg svg {
+            width: 16px;
+            height: 16px;
+            color: #d32f2f;
+        }
+        
+        .alert-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 6px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .alert-description {
+            color: #555;
+            font-size: 9pt;
+            line-height: 1.5;
+            font-family: Arial, sans-serif;
+        }
+        
+        .section-title {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .warning-list {
+            margin-bottom: 24px;
+        }
+        
+        .warning-item {
+            display: flex;
+            margin-bottom: 16px;
+        }
+        
+        .warning-icon-small {
+            background: #ffcdd2;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            margin-top: 1px;
+        }
+        
+        .warning-icon-small svg {
+            width: 16px;
+            height: 16px;
+            color: #d32f2f;
+        }
+        
+        .warning-content {
+            flex: 1;
+        }
+        
+        .warning-item-title {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 3px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .warning-item-description {
+            font-size: 9pt;
+            color: #555;
+            line-height: 1.4;
+            font-family: Arial, sans-serif;
+        }
+        
+        .highlight-text {
+            background: linear-gradient(120deg, rgba(252,211,77,0.3) 0%, rgba(252,211,77,0.3) 100%);
+            padding: 1px 3px;
+            border-radius: 3px;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            padding: 18px;
+            border-radius: 6px;
+            border: 1px solid #bbdefb;
+            margin-bottom: 24px;
+        }
+        
+        .info-box-title {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .info-box-content {
+            font-size: 9pt;
+            color: #555;
+            line-height: 1.5;
+            font-family: Arial, sans-serif;
+        }
+        
+        .stop-method {
+            background: #e8f5e8;
+            border: 1px solid #c8e6c9;
+            border-radius: 6px;
+            padding: 18px;
+            margin-bottom: 24px;
+        }
+        
+        .stop-title {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 12px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .stop-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .stop-letter {
+            background: #4caf50;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10pt;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .stop-content {
+            flex: 1;
+        }
+        
+        .stop-item-title {
+            font-size: 9pt;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 2px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .stop-item-description {
+            font-size: 8pt;
+            color: #555;
+            line-height: 1.4;
+            font-family: Arial, sans-serif;
+        }
+        
+        .best-practices {
+            background: #fff3e0;
+            border: 1px solid #ffcc02;
+            border-radius: 6px;
+            padding: 18px;
+            margin-bottom: 24px;
+        }
+        
+        .best-practices-title {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 12px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .practice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .practice-icon {
+            background: #ff9800;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .practice-icon svg {
+            width: 12px;
+            height: 12px;
+            color: white;
+        }
+        
+        .practice-text {
+            font-size: 9pt;
+            color: #555;
+            line-height: 1.4;
+            font-family: Arial, sans-serif;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 16px 20px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+            font-family: Arial, sans-serif;
+            font-size: 8pt;
+            color: #6c757d;
+        }
+        
+        .footer a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .microsoft-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+        
+        .microsoft-logo svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+        }
+        
+        .microsoft-text {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 14px;
+            color: #fff;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="main-card"><!-- Header -->
+<div class="header">
+<div class="header-title"><svg class="warning-icon" fill="currentColor" viewbox="0 0 24 24"> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path> </svg> Phishing Awareness Training</div>
+
+<div class="security-badge">SECURITY ALERT</div>
+</div>
+<!-- Content -->
+
+<div class="content"><!-- Alert Section -->
+<div class="alert-section" style="display: flex; align-items: center; background: #ffeaea; border: 1px solid #f8bcbc; padding: 18px 24px; border-radius: 8px; margin-bottom: 24px;">
+<div>
+<div style="font-size: 1.15em; font-weight: bold; color: #222; margin-bottom: 4px; display: flex; align-items: center;"><svg fill="none" height="24" style="margin-right: 8px;" viewbox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"> <circle cx="16" cy="16" fill="#e53935" r="16"></circle> <rect fill="white" height="13" rx="1.75" width="3.5" x="14.25" y="8"></rect> <rect fill="white" height="3" rx="1.75" width="3.5" x="14.25" y="23"></rect> </svg> You Just Experienced a Phishing Simulation!</div>
+
+<div class="alert-description">The &quot;Microsoft Password Expiry&quot; email and login page you just encountered was a <span class="highlight-text">phishing simulation</span> designed to test your security awareness. This is a safe training environment to help you recognize real phishing attempts.</div>
+</div>
+</div>
+<!-- What Happened Section -->
+
+<div class="section-title">📧 What Just Happened?</div>
+
+<div class="warning-list">
+<div class="warning-item">
+<div class="warning-icon-small"><svg fill="currentColor" viewbox="0 0 24 24"> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path> </svg></div>
+
+<div class="warning-content">
+<div class="warning-item-title">Fake Urgency</div>
+
+<div class="warning-item-description">The email created false urgency with &quot;24 hours remaining&quot; and &quot;CRITICAL&quot; warnings to pressure you into immediate action.</div>
+</div>
+</div>
+
+<div class="warning-item">
+<div class="warning-icon-small"><svg fill="currentColor" viewbox="0 0 24 24"> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path> </svg></div>
+
+<div class="warning-content">
+<div class="warning-item-title">Generic Greeting</div>
+
+<div class="warning-item-description">Used &quot;Dear User&quot; instead of your actual name - a common phishing tactic to target multiple recipients.</div>
+</div>
+</div>
+
+<div class="warning-item">
+<div class="warning-icon-small"><svg fill="currentColor" viewbox="0 0 24 24"> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path> </svg></div>
+
+<div class="warning-content">
+<div class="warning-item-title">Credential Harvesting</div>
+
+<div class="warning-item-description">The fake login page was designed to steal your current password and any new password you might create.</div>
+</div>
+</div>
+
+<div class="warning-item">
+<div class="warning-icon-small"><svg fill="currentColor" viewbox="0 0 24 24"> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path> </svg></div>
+
+<div class="warning-content">
+<div class="warning-item-title">Professional Appearance</div>
+
+<div class="warning-item-description">Used Microsoft branding and professional design to appear legitimate and trustworthy.</div>
+</div>
+</div>
+</div>
+<!-- S.T.O.P. Method -->
+
+<div class="stop-method">
+<div class="stop-title">🛡️ The S.T.O.P. Method for Phishing Detection</div>
+
+<div class="stop-item">
+<div class="stop-letter">S</div>
+
+<div class="stop-content">
+<div class="stop-item-title">Stop</div>
+
+<div class="stop-item-description">Pause before clicking any links or providing information. Don&#39;t let urgency pressure you into hasty decisions.</div>
+</div>
+</div>
+
+<div class="stop-item">
+<div class="stop-letter">T</div>
+
+<div class="stop-content">
+<div class="stop-item-title">Think</div>
+
+<div class="stop-item-description">Ask yourself: Was I expecting this? Does this make sense? Would Microsoft really ask for my password this way?</div>
+</div>
+</div>
+
+<div class="stop-item">
+<div class="stop-letter">O</div>
+
+<div class="stop-content">
+<div class="stop-item-title">Observe</div>
+
+<div class="stop-item-description">Look for warning signs: generic greetings, urgency, threats, suspicious links, or unusual requests.</div>
+</div>
+</div>
+
+<div class="stop-item">
+<div class="stop-letter">P</div>
+
+<div class="stop-content">
+<div class="stop-item-title">Protect</div>
+
+<div class="stop-item-description">If suspicious, report it to IT security, delete the email, and never provide credentials or click links.</div>
+</div>
+</div>
+</div>
+<!-- Best Practices -->
+
+<div class="best-practices">
+<div class="best-practices-title">🔒 Password Security Best Practices</div>
+
+<div class="practice-item">
+<div class="practice-icon"><svg fill="currentColor" viewbox="0 0 24 24"> <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path> </svg></div>
+
+<div class="practice-text">Use unique, strong passwords for each account (12+ characters with letters, numbers, symbols)</div>
+</div>
+
+<div class="practice-item">
+<div class="practice-icon"><svg fill="currentColor" viewbox="0 0 24 24"> <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path> </svg></div>
+
+<div class="practice-text">Enable two-factor authentication (2FA) on all important accounts</div>
+</div>
+
+<div class="practice-item">
+<div class="practice-icon"><svg fill="currentColor" viewbox="0 0 24 24"> <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path> </svg></div>
+
+<div class="practice-text">Use a password manager to generate and store secure passwords</div>
+</div>
+
+<div class="practice-item">
+<div class="practice-icon"><svg fill="currentColor" viewbox="0 0 24 24"> <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path> </svg></div>
+
+<div class="practice-text">Never share passwords via email, text, or phone calls</div>
+</div>
+
+<div class="practice-item">
+<div class="practice-icon"><svg fill="currentColor" viewbox="0 0 24 24"> <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path> </svg></div>
+
+<div class="practice-text">Regularly update passwords and monitor accounts for suspicious activity</div>
+</div>
+</div>
+<!-- Real Microsoft Information -->
+
+<div class="info-box">
+<div class="info-box-title">ℹ️ How Microsoft Really Handles Password Expiry</div>
+
+<div class="info-box-content"><strong>Microsoft does NOT:</strong><br />
+&bull; Send urgent password expiry emails with 24-hour deadlines<br />
+&bull; Ask for your current password via email links<br />
+&bull; Use generic greetings like &quot;Dear User&quot;<br />
+&bull; Threaten immediate account lockout<br />
+<br />
+<strong>Microsoft DOES:</strong><br />
+&bull; Send notifications through official Microsoft 365 admin center<br />
+&bull; Provide advance notice (usually 14-30 days)<br />
+&bull; Use your actual name in communications<br />
+&bull; Direct you to official Microsoft portals (microsoft.com, office.com)<br />
+&bull; Never ask for passwords via email</div>
+</div>
+<!-- Action Items -->
+
+<div class="info-box">
+<div class="info-box-title">✅ What You Should Do Now</div>
+
+<div class="info-box-content">1. <strong>Report suspicious emails</strong> to your IT security team<br />
+2. <strong>Enable 2FA</strong> on your Microsoft account if not already enabled<br />
+3. <strong>Review your password</strong> and ensure it meets security standards<br />
+4. <strong>Share this training</strong> with colleagues to raise awareness<br />
+5. <strong>Stay vigilant</strong> - phishing attempts are becoming more sophisticated</div>
+</div>
+</div>
+<!-- Footer -->
+
+<div class="footer">
+<div class="microsoft-logo"><svg viewbox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"> <path d="M0 0h11v11H0zM12 0h11v11H12zM0 12h11v11H0zM12 12h11v11H12z" fill="#1976d2"></path> </svg> <span style="color: #1976d2; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; font-weight: 400; letter-spacing: 0.5px;">Microsoft</span></div>
+
+<p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
+
+<p>This is a security awareness training simulation. For real Microsoft support, visit <a href="https://support.microsoft.com">support.microsoft.com</a></p>
+</div>
+</div>
+</div>
+</body>
+</html>
